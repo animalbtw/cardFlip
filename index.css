@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+}
+
+.wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*background-image: url("./Textures/leather-book-textures--4.jpg");*/
+    background-color: green;
+    background-size: 100%;
+    display: flex;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "suits cP suits1"
+                         "suits cP suits1";
+}
+
+.img_suits {
+    width: 50px;
+    height: auto;
+}
+
+/* CARD INSTANT PLACE */
+
+.card_place {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: cP;
+}
+
+.card_mover {
+    width: 50%;
+    height: 50%;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.front .back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+
+.card_mover:active {
+    outline: none;
+    border: none
+}
+
+.card_mover:focus {
+    outline: none;
+    border: none
+}
+
+.card_shirt {
+    height: 100%;
+    width: 100%;
+    background-image: url("Textures/cardShirt.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* SUITS */
+
+.suits {
+    display: flex;
+    grid-area: suits;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.suits1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: suits1;
+    display: flex;
+}
+
+.diamonds {
+    border-radius: 10px;
+    border: 1px solid white;
+    width: 150px;
+    height: 230px;
+    margin: 5px;
+}
+
+#diamonds_canvas {
+    background-size: 100%;
+}
+
+.clubs {
+    border-radius: 10px;
+    border: 1px solid white;
+    width: 150px;
+    margin: 5px;
+    height: 230px;
+}
+
+#clubs_canvas {
+    background-size: 100%;
+
+}
+
+.spades {
+    border-radius: 10px;
+    border: 1px solid white;
+    margin: 5px;
+    width: 150px;
+    height: 230px;
+}
+
+#spades_canvas {
+    background-size: 100%;
+
+}
+
+.hearts {
+    border-radius: 10px;
+    border: 1px solid white;
+    margin: 5px;
+    width: 150px;
+    height: 230px;
+}
+
+#hearts_canvas {
+    background-size: 100%;
+}
